@@ -10,8 +10,8 @@ import java.io.PrintWriter;
 @WebServlet(
         urlPatterns = {"/config"},
         initParams = {
-                @WebInitParam(name="name",value="Zhou Weiqiang"),
-                @WebInitParam(name="studentId",value="2019211001000713"),
+                @WebInitParam(name="name",value="ZengYufang"),
+                @WebInitParam(name="studentId",value="2019211001000803"),
         }
 )
 
