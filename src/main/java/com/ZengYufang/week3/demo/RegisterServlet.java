@@ -13,7 +13,8 @@ public class RegisterServlet extends HttpServlet {
     Connection con=null;
     @Override
     public void init() throws ServletException {
-        String driver=getServletConfig().getServletContext().getInitParameter("driver");
+        super.init();
+        /*String driver=getServletConfig().getServletContext().getInitParameter("driver");
         String url=getServletConfig().getServletContext().getInitParameter("url");
         String username=getServletConfig().getServletContext().getInitParameter("username");
         String password=getServletConfig().getServletContext().getInitParameter("password");
@@ -23,22 +24,24 @@ public class RegisterServlet extends HttpServlet {
             System.out.println("init()-->"+con);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        }
+        }*/
+        con=(Connection) getServletContext().getAttribute("con");
     }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        doPost(request,response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        /*String Username = request.getParameter("Username");
+        String Username = request.getParameter("Username");
         String Password = request.getParameter("Password");
         String Email = request.getParameter("Email");
         String Gender = request.getParameter("Gender");
         String BirthDate = request.getParameter("BirthDate");
 
-        PrintWriter writer = response.getWriter();
+        /*PrintWriter writer = response.getWriter();
         writer.println("<br/>");
         writer.println("<br/>Username: " + Username);
         writer.println("<br/>Password: " + Password);
@@ -50,26 +53,21 @@ public class RegisterServlet extends HttpServlet {
         writer.close();
 
          */
-        String Username=request.getParameter("Username");
-        String password=request.getParameter("password");
-        String Email=request.getParameter("Email");
-        String Gender=request.getParameter("Gender");
-        String Date=request.getParameter("Date");
 
         String sql1="insert into Usertable values(?,?,?,?,?)";
         PreparedStatement pstmt= null;
         try {
             pstmt = con.prepareStatement(sql1);
             pstmt.setString(1,Username);
-            pstmt.setString(2,password);
+            pstmt.setString(2,Password);
             pstmt.setString(3,Email);
             pstmt.setString(4,Gender);
-            pstmt.setString(5,Date);
+            pstmt.setString(5,BirthDate);
             pstmt.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        response.setContentType("text/html");
+        /*response.setContentType("text/html");
         PrintWriter out=response.getWriter();
         out.println("<html>");
         out.println("<head><title>Register</title></head>");
@@ -95,7 +93,7 @@ public class RegisterServlet extends HttpServlet {
         }
         out.println("</table>");
         out.println("</body>");
-        out.println("</html>");
+        out.println("</html>");*/
     }
     @Override
     public void destroy() {
