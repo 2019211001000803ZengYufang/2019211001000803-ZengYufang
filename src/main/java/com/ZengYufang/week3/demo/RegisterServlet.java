@@ -64,6 +64,7 @@ public class RegisterServlet extends HttpServlet {
             pstmt.setString(4,Gender);
             pstmt.setString(5,BirthDate);
             pstmt.executeUpdate();
+            response.sendRedirect("login.jsp");
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
