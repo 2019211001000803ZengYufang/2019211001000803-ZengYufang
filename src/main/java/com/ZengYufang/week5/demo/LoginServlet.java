@@ -42,6 +42,7 @@ public class LoginServlet extends HttpServlet {
                 request.getRequestDispatcher("WEB-INF/views/login.jsp").forward(request,response);
             }
         } catch (SQLException throwables) {
+
             throwables.printStackTrace();
         }
         /*String sql="select * from Usertable where username=? and password=?";

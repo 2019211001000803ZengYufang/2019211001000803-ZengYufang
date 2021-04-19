@@ -37,6 +37,26 @@
         <servlet-name>ConfigDemoServlet</servlet-name>
         <servlet-class>com.ZengYufang.week4.demo.ConfigDemoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.ZengYufang.week5.demo.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>JDBCServletContextListenerServlet</servlet-name>
+        <servlet-class>com.ZengYufang.week6.demo.JDBCServletContextListenerServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RedirectServlet</servlet-name>
+        <servlet-class>com.ZengYufang.week6.demo.RedirectServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>com.ZengYufang.week6.demo.SearchServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>com.ZengYufang.controller.HomeServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ZengYufang</servlet-name>
         <url-pattern>/hello</url-pattern>
@@ -81,4 +101,7 @@
         <param-name>password</param-name>
         <param-value>123456</param-value>
     </context-param>
+    <welcome-file-list>
+        <welcome-file>home</welcome-file>
+    </welcome-file-list>
 </web-app>
