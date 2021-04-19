@@ -48,6 +48,7 @@ public class UserDao implements IUserDao{
             user.setBirthdate(rs.getDate("birthdate"));
 
         }
+
         return user;
     }
 

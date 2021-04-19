@@ -43,6 +43,7 @@ public class LoginServlet extends HttpServlet {
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
+
         }
         /*String sql="select * from Usertable where username=? and password=?";
         PreparedStatement pstmt= null;
@@ -55,7 +56,7 @@ public class LoginServlet extends HttpServlet {
             if(rs.next()){
                 /*out.println("Login Success!!!");
                 out.println("Welcome,"+Username);*/
-        request.setAttribute("id",rs.getInt("id"));
+                //request.setAttribute("id",rs.getInt("id"));
                 /*request.setAttribute("id",rs.getInt("id"));
                 request.setAttribute("username",rs.getString("username"));
                 request.setAttribute("password",rs.getString("password"));
