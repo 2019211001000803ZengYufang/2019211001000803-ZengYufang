@@ -43,7 +43,6 @@ public class LoginServlet extends HttpServlet {
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
-
         }
         /*String sql="select * from Usertable where username=? and password=?";
         PreparedStatement pstmt= null;
