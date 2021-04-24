@@ -1,8 +1,4 @@
-<html>
-<head>
-    <title>My Online Shop</title>
-
-</head>
+<%@ page import="com.ZengYufang.model.User" %>
 <html>
 <head>
     <title>My Online Shop</title>
@@ -11,7 +7,7 @@
 <body style="margin:0px;padding:0px;font-family:helvetica;">
 <table width="100%" cellpadding="0" cellspacing="0">
     <tr>
-        <td height="80" style="background-color:#788dad;
+        <td height="78" style="background-color:#788dad;
                             border-width:2px;
                             border-style:solid;
                             border-color:black;
@@ -37,10 +33,20 @@
         </td>
     </tr>
     <tr height="25"><td align="right"><font size="18" color="blue">
-        Welcome,<font size="18" color="red"> Guest</font>
-    </font></td></tr>
+        Welcome,
+        <%
+            User user=(User)session.getAttribute("user");
+            if(user!=null){
+                out.println(user.getUsername());
+            }else{
+        %>
+        <font size="18" color="red"> Guest</font>
+        <%}%>
+    </font></td> </tr>
     <tr height="20"><td align="right">
-        <br> <a href="#">Logout</a>
+        <%if(session.getAttribute("user")!=null){%>
+        <br> <a href="logout">Logout</a>
+        <%}%>
         <br><a href="#">My Cart</a><br/>
         <a href="register.jsp">Register Here</a>
     </td></tr>
