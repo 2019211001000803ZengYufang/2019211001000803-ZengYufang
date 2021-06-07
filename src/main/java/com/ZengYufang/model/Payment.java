@@ -27,7 +27,7 @@ public  class Payment implements java.io.Serializable {
 
     // Constructors
 
-    /** default constructor   */
+    /** default constructor*/
     public Payment() {
     }
 

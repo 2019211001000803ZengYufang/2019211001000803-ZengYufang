@@ -80,6 +80,7 @@
                             <td>Cart Sub Total</td>
                             <td>${cal }</td>
                         </tr>
+
                         <tr class="shipping-cost">
                             <td>Shipping Cost</td>
                             <td>Free</td>

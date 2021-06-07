@@ -54,9 +54,7 @@
                                 <div class="content-404 text-center">
                                     <img src="<%=basePath %>images/cart/no_order.png" class="img-responsive" alt="" />
                                     <h1>No Order Found.</h1>
-
                                 </div></td></tr>
-
                         </c:when>
                         <c:otherwise>
                             <!-- loop_start -->

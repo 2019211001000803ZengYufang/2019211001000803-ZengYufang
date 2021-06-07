@@ -11,7 +11,6 @@ import java.util.Set;
 
 @SuppressWarnings("serial")
 public class Order implements java.io.Serializable {
-
     // Fields
     private int orderId;
     private int customerId;

@@ -171,7 +171,6 @@
             </div>
         </c:if>
     </div>
-
     </form>
 </section> <!--/#cart_items-->
 <%@include file="footer.jsp" %>

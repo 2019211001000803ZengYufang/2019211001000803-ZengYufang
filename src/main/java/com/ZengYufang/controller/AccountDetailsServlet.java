@@ -22,7 +22,6 @@ public class AccountDetailsServlet extends HttpServlet {
         super.init();;
         con=(Connection) getServletContext().getAttribute("con");
     }
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session=request.getSession(false);

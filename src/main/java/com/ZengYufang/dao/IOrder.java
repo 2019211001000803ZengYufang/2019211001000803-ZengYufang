@@ -23,7 +23,6 @@ public interface IOrderDao {
      * @return int
      */
     int delete(Connection con, Order order);
-
     /**
      * Update a Order
      * @param con

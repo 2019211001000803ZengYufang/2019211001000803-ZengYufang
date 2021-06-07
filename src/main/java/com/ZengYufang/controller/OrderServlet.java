@@ -37,6 +37,7 @@ public class OrderServlet extends HttpServlet {
         String path="/WEB-INF/views/order.jsp";
         request.getRequestDispatcher(path).forward(request,response);
     }
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int customerId=request.getParameter("customerId")!=null?Integer.parseInt(request.getParameter("customerId")):0;
