@@ -166,7 +166,6 @@
 					</span>
                 </c:forEach>
                 <!-- loop_end -->
-
                 <span>
 					<input type="submit" name="submit" class="btn btn-primary pull-right" value="Submit"></span>
             </div>

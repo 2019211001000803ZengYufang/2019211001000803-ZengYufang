@@ -27,11 +27,11 @@ public  class Payment implements java.io.Serializable {
 
     // Constructors
 
-    /** default constructor */
+    /** default constructor   */
     public Payment() {
     }
 
-    /** minimal constructor */
+    /** minimal constructor   */
     public Payment(String paymentType, Boolean allowed) {
         this.paymentType = paymentType;
         this.allowed = allowed;

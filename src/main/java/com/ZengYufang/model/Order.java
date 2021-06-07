@@ -13,7 +13,6 @@ import java.util.Set;
 public class Order implements java.io.Serializable {
 
     // Fields
-
     private int orderId;
     private int customerId;
     private int paymentId;

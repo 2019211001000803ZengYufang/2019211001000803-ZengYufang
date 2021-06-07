@@ -31,7 +31,6 @@ import com.ZengYufang.model.Product;
  * @author dabing
  */
 public class OrderDao implements IOrderDao {
-
     @Override
     public int save(Connection con,Order order) throws SQLException {
         int flag=0;
