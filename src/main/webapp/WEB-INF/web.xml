@@ -57,6 +57,62 @@
         <servlet-name>HomeServlet</servlet-name>
         <servlet-class>com.ZengYufang.controller.HomeServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.ZengYufang.controller.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateUserServlet</servlet-name>
+        <servlet-class>com.ZengYufang.controller.UpdateUserServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminHomeServlet</servlet-name>
+        <servlet-class>com.ZengYufang.controller.AdminHomeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddProductServlet</servlet-name>
+        <servlet-class>com.ZengYufang.controller.AddProductServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProductListServlet</servlet-name>
+        <servlet-class>com.ZengYufang.controller.ProductListServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetImgServlet</servlet-name>
+        <servlet-class>com.ZengYufang.controller.GetImgServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProductDetailsServlet</servlet-name>
+        <servlet-class>com.ZengYufang.controller.ProductDetailsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ShopServlet</servlet-name>
+        <servlet-class>com.ZengYufang.controller.ShopServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CarServlet</servlet-name>
+        <servlet-class>com.ZengYufang.controller.CarServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserListServlet</servlet-name>
+        <servlet-class>com.ZengYufang.controller.UserListServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AccountDetailsServlet</servlet-name>
+        <servlet-class>com.ZengYufang.controller.AccountDetailsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OrderDetailsServlet</servlet-name>
+        <servlet-class>com.ZengYufang.controller.OrderDetailsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OrderServlet</servlet-name>
+        <servlet-class>com.ZengYufang.controller.OrderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CartServlet</servlet-name>
+        <servlet-class>com.ZengYufang.controller.CartServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ZengYufang</servlet-name>
         <url-pattern>/hello</url-pattern>
@@ -104,4 +160,14 @@
     <welcome-file-list>
         <welcome-file>home</welcome-file>
     </welcome-file-list>
+
+    <filter>
+        <filter-name>ZyfFilter</filter-name>
+        <filter-class>com.lab2.ZyfFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ZyfFilter</filter-name>
+        <url-pattern>/lab2/welcome.jsp</url-pattern>
+        <url-pattern>/lab2/validation.jsp</url-pattern>
+    </filter-mapping>
 </web-app>
